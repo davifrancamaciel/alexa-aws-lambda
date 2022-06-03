@@ -6,8 +6,6 @@
 
 O projeto tem como finalidade criar funções lambdas para execução por chamada da Alexa na [AWS][aws] usando a automação do framework [serverless][serverless].
 
--  [Demo](http://claro-message-nag-dev.s3-website-us-west-1.amazonaws.com) 
-
 ## **:computer: TECNOLOGIAS**
 
 - **[Serverless][serverless]** 
@@ -28,8 +26,6 @@ Instale as dependências contidas nos arquivos `package.json`. Para instalar as 
 $ npm install
 ```
 
-Exemplos:
-```sh
 
 
 ## **:books: REFERÊNCIAS**
