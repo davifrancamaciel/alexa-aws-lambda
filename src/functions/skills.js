@@ -44,7 +44,7 @@ const LigarServicosIntentHandler = {
     async handle(handlerInput) {
 
         await actionApi('on')
-        const speakOutput = 'Ok, o estagiário ligou os serviços com sucesso. Até a próxima';
+        const speakOutput = 'Ok,  estagiário Rafael Onofre preguiçoso ligou os serviços com sucesso. Até a próxima';
 
         return handlerInput.responseBuilder
             .speak(speakOutput)
