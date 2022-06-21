@@ -42,3 +42,9 @@ skillsGet:
 #    Defina variáveis de ambiente de função aqui
 #    environment:
 #      variable2: value2
+dotGet:
+  handler: src/functions/dot.handler
+  events:
+    - httpApi:
+        path: /dot
+        method: get

@@ -19,6 +19,8 @@ provider:
     shouldStartNameWithService: true
   environment:
     URL_API: ${self:custom.secrets.URL_API}
+    USER: ${self:custom.secrets.USER}
+    PASSWORD: ${self:custom.secrets.PASSWORD}
  
    
 
