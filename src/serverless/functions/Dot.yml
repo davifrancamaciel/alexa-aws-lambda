@@ -1,0 +1,26 @@
+skillDot:
+  environment:
+    bucketName: ${self:service}-${opt:stage, self:provider.stage}-files
+  timeout: 600 
+  handler: src/functions/skills.handler
+  events:
+    - alexaSkill: amzn1.ask.skill.50ae45fa-2f07-4573-9d8b-0561e1596343
+dotGet:
+  environment:
+    bucketName: ${self:service}-${opt:stage, self:provider.stage}-files
+  timeout: 600 
+  handler: src/functions/dot.handlerGet
+  events:
+    - httpApi:
+        path: /dot
+        method: get 
+getFiles:
+  handler: src/functions/dotFiles.handler
+  timeout: 600 
+  events:
+    - s3:
+        bucket: ${self:service}-${opt:stage, self:provider.stage}-files
+        event: s3:ObjectCreated:*
+        rules:
+          - prefix: comprovantes/
+          - suffix: .png

@@ -21,6 +21,13 @@ provider:
     URL_API: ${self:custom.secrets.URL_API}
     USER: ${self:custom.secrets.USER}
     PASSWORD: ${self:custom.secrets.PASSWORD}
+  package:
+    excludeDevDependencies: true
+    exclude:
+      - .git/**
+      - .vscode/**        
+      - venv/**
+      - node_modules/**
  
    
 
@@ -55,6 +62,7 @@ provider:
 
 functions:
   - ${file(src/serverless/functions/Skills.yml)}
+  - ${file(src/serverless/functions/Dot.yml)}
 
 # you can add CloudFormation resource templates here
 #resources:
